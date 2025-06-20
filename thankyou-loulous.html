@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>For Alya 🌹</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; overflow: hidden;
+  }
+  .box, .rose, .message, .button, .final-panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease forwards;
+  }
+  .box img, .rose img {
+    width: 200px; max-width: 80vw;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  .box img:hover { transform: scale(1.1); }
+  .message {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #4a235a;
+    text-align: center;
+    white-space: pre-line;
+    padding: 0 20px;
+    font-family: 'Pacifico', cursive;
+  }
+  .button button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #ff69b4;
+    border: none; border-radius: 20px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .button button:hover { background: #ff1493; }
+  .final-panel {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 20px;
+    font-family: 'Pacifico', cursive;
+  }
+  .final-panel button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff69b4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="box" style="display: flex;">
+  <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Gifts-and-Chocolates-PNG-/Blue_Gift_Box_Transparent_Clip_Art_Image.png" alt="Gift Box" onclick="openGift()">
+</div>
+
+<div class="rose">
+    <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Gifts-and-Chocolates-PNG-/Blue_Gift_Box_Transparent_Clip_Art_Image.png" alt="Gift Box" onclick="openGift()">
+</div>
+
+<div class="message">
+  thank u so very much<br>most amazing ever girl itw loulous<br>im the luckiest to have u fr u mean everything to me<br>hope u always be the happiest<br>and always smiling ur gorgeous<br> smile ALWAYS<br><br><br> btw dont click on "click here" <br>because ull find i will n3klk sentence i warned u
+</div>
+
+<div class="button">
+  <button onclick="showFinal()">Click Here</button>
+</div>
+
+<div class="final-panel" id="finalPanel">
+  I love you ALYA 💖
+  <button onclick="closeFinal()">Close</button>
+</div>
+
+<script>
+  function openGift() {
+    document.querySelector('.box').style.display = 'none';
+    document.querySelector('.rose').style.display = 'flex';
+    document.querySelector('.message').style.display = 'flex';
+    document.querySelector('.button').style.display = 'flex';
+  }
+  function showFinal() {
+    document.getElementById('finalPanel').style.display = 'flex';
+  }
+  function closeFinal() {
+    document.getElementById('finalPanel').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
